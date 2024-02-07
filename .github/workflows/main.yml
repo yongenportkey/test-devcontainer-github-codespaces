@@ -23,7 +23,7 @@ jobs:
             dotnet test
 
       - name: Deploy to testnet
-        uses: yongenaelf/aelf-testnet-deploy-action@v1.4.3
+        uses: yongenaelf/aelf-testnet-deploy-action@v1
         id: deploy
         with:
           private-key: ${{ secrets.PRIVATEKEY }}
@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Proposal Id
         id: proposal
-        uses: yongenaelf/aelf-deploy-proposal-id-action@v1.2.1
+        uses: yongenaelf/aelf-deploy-proposal-id-action@v1
         with:
           transaction-id: ${{ needs.build.outputs.deploymentid }}
     outputs:
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Proposal Details
-        uses: yongenaelf/aelf-proposal-details-action@v1.1.1
+        uses: yongenaelf/aelf-proposal-details-action@v1
         with:
           proposal-id: ${{ needs.proposal.outputs.proposalid }}
     needs: proposal
