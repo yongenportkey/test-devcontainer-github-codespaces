@@ -9,7 +9,7 @@ namespace AElf.Contracts.HelloWorld
         // adding this line is for preparing the contract deployment later, 
         // to differentiate each person's contract. 
         // This is because our testnet does not allow the deployment of two identical contracts.
-        const string author = "test-devcontainer-3";
+        const string author = "test-devcontainer-4";
         // A method that modifies the contract state
         public override Empty Update(StringValue input)
         {
