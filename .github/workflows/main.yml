@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Proposal Details
-        uses: yongenaelf/aelf-proposal-details-action@v1.2.0
+        uses: yongenaelf/aelf-proposal-details-action@v1.2.1
         with:
           proposal-id: ${{ needs.proposal.outputs.proposalid }}
     needs: proposal
